@@ -6,8 +6,17 @@ import { AddTodo } from "../add-todo/addtodo.component";
 export const Container = props => (
   <div>
     <Header />
-    <Filter filterFunction={props.filterFunction} />
-    <Todos filterText={props.filterText} todos={props.todos} />
-    <AddTodo />
+    <Filter
+      filterFunction={props.filterFunction}
+      handleHideCompleted={props.handleHideCompleted}
+    />
+    <Todos
+      filterText={props.filterText}
+      todos={props.todos}
+      handleCheckbox={props.handleCheckbox}
+      handleRemove={props.handleRemove}
+      hideCompleted={props.hideCompleted}
+    />
+    <AddTodo handleAddTodo={props.handleAddTodo} />
   </div>
 );

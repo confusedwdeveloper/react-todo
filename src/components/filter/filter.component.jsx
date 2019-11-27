@@ -7,5 +7,9 @@ export const Filter = props => (
       onChange={props.filterFunction}
       placeholder="filter todos"
     />
+    <label>
+      Hide Completed{" "}
+      <input onChange={props.handleHideCompleted} type="checkbox" />
+    </label>
   </div>
 );
