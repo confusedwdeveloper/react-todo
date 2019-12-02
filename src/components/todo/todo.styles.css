@@ -1,0 +1,26 @@
+.todo-outer-div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fffffe;
+  transition: background 0.2s ease-in-out;
+  transition: color 0.1s ease-in-out;
+  text-align: justify;
+  margin-bottom: 1rem;
+}
+.todo-outer-div:hover {
+  background: #f9bc60;
+  color: #001e1d;
+}
+.todo-inner-div {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 300px;
+}
+@media (max-width: 800px) {
+  .todo-outer-div {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

@@ -1,5 +1,6 @@
 import React from "react";
 import { Todo } from "../todo/todo.component";
+import "./todos.styles.css";
 
 export class Todos extends React.Component {
   render() {
@@ -12,16 +13,20 @@ export class Todos extends React.Component {
     this.props.hideCompleted &&
       (filteredTodo = filteredTodo.filter(todo => !todo.completed));
     if (filteredTodo.length === 0) {
-      return <p>Nothing to show here</p>;
+      return <p className="empty-message">Nothing to show here</p>;
     } else {
-      return filteredTodo.map(todo => (
-        <Todo
-          handleCheckbox={this.props.handleCheckbox}
-          todo={todo}
-          key={todo.id}
-          handleRemove={this.props.handleRemove}
-        />
-      ));
+      return (
+        <div className="todos-container">
+          {filteredTodo.map(todo => (
+            <Todo
+              handleCheckbox={this.props.handleCheckbox}
+              todo={todo}
+              key={todo.id}
+              handleRemove={this.props.handleRemove}
+            />
+          ))}
+        </div>
+      );
     }
   }
 }
