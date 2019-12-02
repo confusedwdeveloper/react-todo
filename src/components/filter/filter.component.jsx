@@ -5,7 +5,11 @@ import Checkbox from "../checkbox/custom-checkbox.component";
 
 export const Filter = props => (
   <div className="filter">
-    <CustomInput type="search" label="Filter Todos" />
+    <CustomInput
+      type="search"
+      label="Filter Todos"
+      filterFunction={props.filterFunction}
+    />
     <Checkbox
       label={"Hide Completed"}
       handleHideCompleted={props.handleHideCompleted}

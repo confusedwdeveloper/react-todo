@@ -4,5 +4,5 @@
   text-align: center;
   padding: 0 1rem;
   background: #004643;
-  height: 100vh;
+  min-height: 100vh;
 }

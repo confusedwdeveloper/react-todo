@@ -5,9 +5,9 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-image: url("./teal-pentagonal-background.png");
   background-size: cover;
-  background-repeat: no-repeat;
+  /* background-repeat: no-repeat; */
   background-position: center;
-  height: 100vh;
+  height: 100%;
 }
 
 code {

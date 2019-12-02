@@ -1,5 +1,5 @@
 import React from "react";
-import { withStyles, makeStyles } from "@material-ui/core/styles";
+import { withStyles } from "@material-ui/core/styles";
 import TextField from "@material-ui/core/TextField";
 
 const CssTextField = withStyles({
@@ -28,9 +28,13 @@ export default function CustomInput(props) {
       id="custom-css-standard-input"
       label={props.label}
       type={props.type}
+      onChange={props.filterFunction}
+      error={props.error}
+      helperText={props.helperText}
     />
   );
 }
 CustomInput.defaultProps = {
-  type: "text"
+  type: "text",
+  error: false
 };
